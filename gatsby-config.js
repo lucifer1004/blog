@@ -2,9 +2,9 @@ var proxy = require('http-proxy-middleware')
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: `Gabriel Wu's Blog`,
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'Powered by Gatsby, Netlify and Netlify CMS.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -82,7 +82,7 @@ module.exports = {
     app.use(
       '/.netlify/functions/',
       proxy({
-        target: 'http://localhost:9000',
+        target: 'http://localhost:9090',
         pathRewrite: {
           '/.netlify/functions/': '',
         },
