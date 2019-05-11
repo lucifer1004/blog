@@ -1,8 +1,8 @@
 ---
 templateKey: index-page
 title: 'Confusionless is impossible,'
-image: /img/emma-frances-logan-142162-unsplash.jpg
-heading: Great coffee with a conscience
+image: /img/cover.jpg
+heading: Gabriel Wu's Blog
 subheading: But you should just keep pursuing.
 mainpitch:
   title: Why Kaldi
@@ -68,4 +68,3 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 ---
-
