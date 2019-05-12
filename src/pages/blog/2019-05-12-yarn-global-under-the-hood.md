@@ -14,13 +14,12 @@ tags:
 
 By default, `yarn global` will create a directory at `~/.config/yarn/global` (on OSX and non-root Linux), and if you enter the directory, you will find its structure like this:
 
->├── node_modules
->
->├── package.json
->
->├── yarn-error.log
->
->└── yarn.lock
+```txt
+├── node_modules
+├── package.json
+├── yarn-error.log
+└── yarn.lock
+```
 
 And in `package.json`, all global packages are defined as `dependencies`, just like  what you are familiar with in a normal JS/TS project.
 
