@@ -1,10 +1,15 @@
 import React from 'react'
 import {Link} from 'gatsby'
 
+// @ts-ignore
 import logo from '../img/logo.svg'
+// @ts-ignore
 import facebook from '../img/social/facebook.svg'
+// @ts-ignore
 import instagram from '../img/social/instagram.svg'
+// @ts-ignore
 import twitter from '../img/social/twitter.svg'
+// @ts-ignore
 import vimeo from '../img/social/vimeo.svg'
 
 const Footer = class extends React.Component {

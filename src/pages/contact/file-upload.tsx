@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { ChangeEvent } from 'react'
 import {navigate} from 'gatsby-link'
 import Layout from '../../components/Layout'
 
-function encode(data) {
+function encode(data: any) {
   const formData = new FormData()
 
   for (const key of Object.keys(data)) {
@@ -13,20 +13,20 @@ function encode(data) {
 }
 
 export default class Contact extends React.Component {
-  constructor(props) {
+  constructor(props: any) {
     super(props)
     this.state = {}
   }
 
-  handleChange = e => {
+  handleChange = (e: any) => {
     this.setState({[e.target.name]: e.target.value})
   }
 
-  handleAttachment = e => {
+  handleAttachment = (e: any) => {
     this.setState({[e.target.name]: e.target.files[0]})
   }
 
-  handleSubmit = e => {
+  handleSubmit = (e: any) => {
     e.preventDefault()
     const form = e.target
     fetch('/', {

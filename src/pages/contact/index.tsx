@@ -2,23 +2,23 @@ import React from 'react'
 import {navigate} from 'gatsby-link'
 import Layout from '../../components/Layout'
 
-function encode(data) {
+function encode(data: any) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&')
 }
 
 export default class Index extends React.Component {
-  constructor(props) {
+  constructor(props: any) {
     super(props)
     this.state = {isValidated: false}
   }
 
-  handleChange = e => {
+  handleChange = (e: any) => {
     this.setState({[e.target.name]: e.target.value})
   }
 
-  handleSubmit = e => {
+  handleSubmit = (e: any) => {
     e.preventDefault()
     const form = e.target
     fetch('/', {

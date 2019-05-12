@@ -1,5 +1,5 @@
 // For more info, check https://www.netlify.com/docs/functions/#javascript-lambda-functions
-export function handler(event, context, callback) {
+export function handler(event: any, context: any, callback: Function) {
   console.log('queryStringParameters', event.queryStringParameters)
   callback(null, {
     // return null to show no errors
