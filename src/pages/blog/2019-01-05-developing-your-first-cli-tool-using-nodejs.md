@@ -2,37 +2,34 @@
 templateKey: blog-post
 title: Developing your first CLI tool using NodeJS
 date: 2019-01-05T15:04:10.000Z
-featuredpost: false
-featuredimage: /img/flavor_wheel.jpg
-description:
-  The Coffee Taster’s Flavor Wheel, the official resource used by coffee
-  tasters, has been revised for the first time this year.
+description: Wanna develop your CLI tool? Let's try it out!
+featuredpost: true
+featuredimage: /img/coding.jpg
 tags:
   - cli
   - nodejs
   - javascript
 ---
+![A coder and his laptop.](/img/coding.jpg)
 
 Most programmers prefer CLI to GUI, why?
 
-- They are smaller in size.
-- Batch processing is ease.
-- Well-designed auto-completion can prevent incorrect manipulations.
-- Using GUI is not cool. (It is true for most geeks.)
-- ...And many other reasons I have not come up with yet.
+* They are smaller in size.
+* Batch processing is ease.
+* Well-designed auto-completion can prevent incorrect manipulations.
+* Using GUI is not cool. (It is true for most geeks.)
+* ...And many other reasons I have not come up with yet.
 
 But not so many have actually developed a CLI. Fortunately, with the help of
 several handful packages, it has become effortless to build a CLI with NodeJS.
 
-Here is the companion repo of this post:
-
-{% github https://github.com/pkuosa-gabriel/node-cli-starter %}
+Here is the companion [repo]( https://github.com/pkuosa-gabriel/node-cli-starter) of this post:
 
 The main packages we will be using:
 
-- [commander](https://github.com/tj/commander.js)
-- [shelljs](https://github.com/shelljs/shelljs)
-- [pkg](https://github.com/zeit/pkg)
+* [commander](https://github.com/tj/commander.js)
+* [shelljs](https://github.com/shelljs/shelljs)
+* [pkg](https://github.com/zeit/pkg)
 
 ## Before we start
 
@@ -309,13 +306,13 @@ The bot says: You are a man // (gender)
 The bot says: I also know Michael Jordan is the God of basketball. // (additionalInfo)
 ```
 
-- If a name is given, the bot will starts with "Hello <somebody>", otherwise it
+* If a name is given, the bot will starts with "Hello <somebody>", otherwise it
   will simply say "Hello world".
-- If an age is given, the bot will retell that by saying "I know you are <age>",
+* If an age is given, the bot will retell that by saying "I know you are <age>",
   otherwise it will say "I do not know your age"
-- If a gender (male/female) is given, the bot will retell that by saying "You
+* If a gender (male/female) is given, the bot will retell that by saying "You
   are a man/woman", otherwise it will say "Well, gender is your privacy"
-- If additional information is given, the bot will simple reply with "I also
+* If additional information is given, the bot will simple reply with "I also
   know <the exact information>".
 
 If you are not so familiar with NodeJS or JavaScript, there are some brief
@@ -359,15 +356,15 @@ principles below:
    value from `fn`, which takes the parameter as its input), instead of a
    boolean.
 
-> **[Tips]**
+> **\[Tips]**
 >
-> - Avoid using `--name`, for `mycli.name` already exists.
-> - Avoid using `-c` and `-C` at the same time without setting the `--` flag for
+> * Avoid using `--name`, for `mycli.name` already exists.
+> * Avoid using `-c` and `-C` at the same time without setting the `--` flag for
 >   them, for they will both be transformed into `mycli.C`. Also avoid using
 >   same `--` flag for different options, or things like `--happy` and
 >   `--no-happy`. Remember the mechanism of the option=>key transform, then you
 >   will never make such a mistake.
-> - Besides the 5th point above, options defined with a `--no` flag has another
+> * Besides the 5th point above, options defined with a `--no` flag has another
 >   notable feature: It can receive parameters, `fn` can also work, but it
 >   ignores the `defaultValue` property. The document does not mention this, but
 >   it can be seen in the
@@ -389,9 +386,9 @@ error: option `-u, --username <name>` argument missing
 This is because the `-u` option has a required parameter. As long as you use
 this option, you must give it a parameter. Otherwise an error will occur.
 
-> **[Tips]**
+> **\[Tips]**
 >
-> - Be careful not to offer the required parameter when using an option which
+> * Be careful not to offer the required parameter when using an option which
 >   requires a parameter. For instance, when you run `node index.js -u -a`, the
 >   `-a` option will not be triggered, for the "-a" you input will be recognized
 >   as the parameter of `-u`.
@@ -400,9 +397,9 @@ The `-g, --gender` option has a regular expression as its `fn`, which matches
 only "male" or "female". This means, when the parameter of `-g` is neither
 "male" nor "female", it will fall into the default value "private".
 
-> **[Tips]**
+> **\[Tips]**
 >
-> - Make sure to set the default value when using a regular expression. In the
+> * Make sure to set the default value when using a regular expression. In the
 >   example above, if no default value is given, and you input a parameter other
 >   than "male" or "female", the value of `mycli.gender` will be `true`, which
 >   you might not expect.
@@ -464,9 +461,9 @@ The bot says: Well, gender is your privacy // (gender)
 
 As you can see, the last `-u` option overwrites all previous `-u` options.
 
-> **[Tips]**
+> **\[Tips]**
 >
-> - If the last `-u` option has no parameter, there will be en error, even if
+> * If the last `-u` option has no parameter, there will be en error, even if
 >   all the previous `-u` options have parameters given, for they have been
 >   overridden.
 
@@ -505,9 +502,9 @@ simply be expanded before being evaluated. So the original input becomes:
 node index.js -u -a -g -i Tom 18 male "Michael Jordan is the God of basketball."
 ```
 
-- `-u` takes "-a" as its parameter, so the first line of output is "Hello -a"
-- `-g` has no parameter, so the default value "private" is used.
-- `-i` takes "Tom" as its parameter, and the rest parameters are abandoned.
+* `-u` takes "-a" as its parameter, so the first line of output is "Hello -a"
+* `-g` has no parameter, so the default value "private" is used.
+* `-i` takes "Tom" as its parameter, and the rest parameters are abandoned.
 
 OK, now you have realized a simple CLI tool, and also got to know some
 mechanisms behind the surface. Congratulations! Lets move on to the next step.
@@ -777,9 +774,9 @@ yarn.lock was created at Thu, 03 Jan 2019 11:36:11 GMT.
 Detailed usage of shelljs can be found in its
 [doc](http://documentup.com/shelljs/shelljs).
 
-> **[Tips]**
+> **\[Tips]**
 >
-> - There is another package called [shell.js](http://shelljs.io), which is used
+> * There is another package called [shell.js](http://shelljs.io), which is used
 >   to render an interactive shell in a web page. Do not mix it up with
 >   [shelljs](https://github.com/shelljs/shelljs).
 
@@ -894,11 +891,11 @@ go back and have a try, and you will find that `node index.js -u Tom -a 18` will
 not provide the output we expect, unless you add something else, e.g.,
 `node index.js hello -u Tom -a 18`.
 
-> **[Tips]**
+> **\[Tips]**
 >
-> - When sub-commands are specified, the `.action()` of the root command will
+> * When sub-commands are specified, the `.action()` of the root command will
 >   act as if it belongs to a `*` sub-command.
-> - If the `*` sub-command is also defined, the `.action()` of the root command
+> * If the `*` sub-command is also defined, the `.action()` of the root command
 >   will simply be ignored.
 
 So we move the execution of the main action to the end of `index.js`, after
@@ -910,10 +907,10 @@ using other sub-commands! That is definitely not what we want. By using
 `mycli.args.length === 0`, the main action will only take effect when there is
 no sub-command.
 
-> **[Tips]**
+> **\[Tips]**
 >
-> - You might wonder what will happen if the root command requires an argument.
-> - The answer is that it will not take effect, because it will be considered to
+> * You might wonder what will happen if the root command requires an argument.
+> * The answer is that it will not take effect, because it will be considered to
 >   be a sub-command, instead of an argument of the root command.
 
 ## Step 06: Packaging the CLI via [pkg](https://github.com/zeit/pkg)
@@ -940,9 +937,9 @@ Several scripts have been added to `package.json`:
 They are used to package our CLI tool for different NodeJS versions, platforms
 and architectures.
 
-> **[Tips]**
+> **\[Tips]**
 >
-> - You may have noticed that `index.js` has been renamed to `mycli.js`, this is
+> * You may have noticed that `index.js` has been renamed to `mycli.js`, this is
 >   to make the output of the help message match the name we expect. It uses the
 >   name of the main JS file as the name of the CLI tool.
 
@@ -993,9 +990,9 @@ then be able to use `mycli` in your command line. Hurray!
 
 This tutorial has come to an end. Thank you for reading!
 
----
+- - -
 
-## Step 0x [Optional]: Adding logs via [winston](https://github.com/winstonjs/winston)
+## Step 0x \[Optional]: Adding logs via [winston](https://github.com/winstonjs/winston)
 
 If you want to further improve your CLI tool, it is a wise idea to make logs
 more organized. Here, we will use
