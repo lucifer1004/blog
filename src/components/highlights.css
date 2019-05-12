@@ -1,0 +1,467 @@
+.editor {
+  color: hsl(212, 66%, 72%);
+  background-color: hsl(212, 24%, 15%);
+}
+.editor .line.cursor-line {
+  background-color: hsla(212, 24%, 27%, 0.26);
+}
+.editor .invisible {
+  color: hsl(212, 66%, 72%);
+}
+.editor .cursor {
+  border-color: hsl(160, 100%, 66%);
+  border-left-width: 2px;
+}
+.editor .selection .region {
+  background-color: hsl(212, 24%, 27%);
+}
+.editor .bracket-matcher .region {
+  border-bottom: 1px solid hsl(160, 100%, 66%);
+}
+.editor .invisible-character {
+  color: hsl(212, 24%, 25%);
+  -webkit-font-smoothing: antialiased;
+}
+.editor .indent-guide {
+  color: hsl(212, 24%, 25%);
+}
+.editor .wrap-guide {
+  background-color: hsl(212, 24%, 25%);
+}
+.editor .find-result .region.region.region,
+.editor .current-result .region.region.region {
+  border-radius: 0px;
+  background-color: hsla(160, 100%, 66%, 0.16);
+  transition: border-color 0.4s;
+}
+.editor .find-result .region.region.region {
+  border: 2px solid transparent;
+}
+.editor .current-result .region.region.region {
+  border: 2px solid hsl(160, 100%, 66%);
+  transition-duration: 0.1s;
+}
+.editor .gutter .line-number {
+  color: hsl(212, 22%, 44%);
+  -webkit-font-smoothing: antialiased;
+}
+.editor .gutter .line-number.git-line-removed:before {
+  bottom: -3px;
+}
+.editor .gutter .line-number.git-line-removed:after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted hsla(0, 70%, 60%, 0.5);
+  pointer-events: none;
+}
+.editor .gutter .line-number.cursor-line {
+  color: hsl(212, 66%, 72%);
+  background-color: hsl(212, 24%, 18%);
+}
+.editor .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+.editor .gutter .line-number .icon-right {
+  color: hsl(212, 66%, 72%);
+}
+.editor .gutter .line-number.folded,
+.editor .gutter .line-number:after,
+.editor .fold-marker:after {
+  color: hsl(212, 66%, 72%);
+}
+.uno-1 {
+  color: hsl(212, 99%, 92%);
+}
+.uno-2 {
+  color: hsl(212, 66%, 72%);
+}
+.uno-3 {
+  color: hsl(212, 44%, 56%);
+}
+.uno-4 {
+  color: hsl(212, 22%, 44%);
+}
+.uno-5 {
+  color: hsl(212, 11%, 30%);
+}
+.duo-1 {
+  color: hsl(160, 99%, 60%);
+}
+.duo-2 {
+  color: hsl(160, 55%, 44%);
+}
+.duo-3 {
+  color: hsl(160, 22%, 33%);
+}
+.syntax--source {
+  color: hsl(212, 66%, 72%);
+}
+.syntax--html.syntax--elements,
+.syntax--entity,
+.syntax--tag,
+.syntax--function-call {
+  color: hsl(212, 99%, 92%);
+}
+.syntax--attribute-name,
+.syntax--character.syntax--escape {
+  color: hsl(212, 44%, 56%);
+}
+.syntax--support {
+  color: hsl(212, 22%, 44%);
+}
+.syntax--variable {
+  color: hsl(212, 44%, 56%);
+}
+.syntax--string,
+.syntax--constant,
+.syntax--storage.syntax--type {
+  color: hsl(160, 99%, 60%);
+}
+.syntax--keyword,
+.syntax--storage {
+  color: hsl(160, 55%, 44%);
+}
+.syntax--punctuation,
+.syntax--bracket,
+.syntax--brace {
+  color: hsl(212, 11%, 30%);
+}
+.syntax--string .syntax--punctuation {
+  color: hsl(160, 22%, 33%);
+}
+.syntax--comment {
+  color: hsl(212, 22%, 44%);
+  font-style: italic;
+}
+.syntax--bold {
+  font-weight: bold;
+}
+.syntax--italic {
+  font-style: italic;
+}
+.syntax--c .syntax--parens,
+.syntax--c .syntax--block {
+  color: hsl(212, 66%, 72%);
+}
+.syntax--c .syntax--parens .syntax--punctuation,
+.syntax--c .syntax--block .syntax--punctuation,
+.syntax--c .syntax--parens .syntax--bracket,
+.syntax--c .syntax--block .syntax--bracket,
+.syntax--c .syntax--parens .syntax--brace,
+.syntax--c .syntax--block .syntax--brace {
+  color: hsl(212, 11%, 30%);
+}
+.syntax--c .syntax--parens .syntax--string .syntax--punctuation,
+.syntax--c .syntax--block .syntax--string .syntax--punctuation {
+  color: hsl(160, 22%, 33%);
+}
+.syntax--c .syntax--comment {
+  color: hsl(160, 22%, 33%);
+}
+.syntax--source.syntax--clojure .syntax--expression {
+  color: hsl(160, 99%, 60%);
+}
+.syntax--source.syntax--clojure .syntax--expression .syntax--punctuation {
+  color: hsl(212, 11%, 30%);
+}
+.syntax--source.syntax--clojure .syntax--symbol {
+  color: hsl(212, 66%, 72%);
+}
+.syntax--source.syntax--clojure .syntax--vector {
+  color: hsl(212, 22%, 44%);
+}
+.syntax--coffee.syntax--source {
+  color: hsl(212, 22%, 44%);
+}
+.syntax--source.syntax--cs .syntax--meta {
+  color: hsl(212, 22%, 44%);
+}
+.syntax--source.syntax--cs .syntax--method {
+  color: hsl(212, 66%, 72%);
+}
+.syntax--css.syntax--source {
+  color: hsl(212, 11%, 30%);
+}
+.syntax--css.syntax--support.syntax--property-name {
+  color: hsl(212, 44%, 56%);
+}
+.syntax--css.syntax--attribute-name.syntax--id,
+.syntax--css.syntax--attribute-name.syntax--class,
+.syntax--css.syntax--attribute-name.syntax--parent-selector {
+  color: hsl(212, 99%, 92%);
+}
+.syntax--css.syntax--unit {
+  color: hsl(160, 55%, 44%);
+}
+.syntax--css.syntax--function {
+  color: hsl(160, 22%, 33%);
+}
+.syntax--css.syntax--punctuation.syntax--terminator {
+  color: hsl(160, 22%, 33%);
+}
+.syntax--css.syntax--at-rule {
+  color: hsl(212, 99%, 92%);
+}
+.syntax--css.syntax--at-rule .syntax--keyword.syntax--punctuation {
+  color: inherit;
+}
+.syntax--gfm {
+  color: hsl(212, 99%, 92%);
+}
+.syntax--gfm .syntax--punctuation,
+.syntax--gfm .syntax--bracket,
+.syntax--gfm .syntax--brace {
+  color: hsl(212, 11%, 30%);
+}
+.syntax--gfm .syntax--string .syntax--punctuation {
+  color: hsl(160, 22%, 33%);
+}
+.syntax--gfm .syntax--link {
+  color: hsl(212, 66%, 72%);
+}
+.syntax--gfm.syntax--markup {
+  color: hsl(212, 66%, 72%);
+}
+.syntax--gfm.syntax--markup.syntax--bold {
+  font-weight: bold;
+}
+.syntax--gfm.syntax--markup.syntax--italic {
+  font-style: italic;
+}
+.syntax--gfm.syntax--markup.syntax--strike {
+  color: hsl(212, 11%, 30%);
+  text-decoration: line-through;
+}
+.syntax--gfm.syntax--markup.syntax--raw {
+  color: hsl(160, 99%, 60%);
+}
+.syntax--gfm.syntax--markup.syntax--raw .syntax--support,
+.syntax--gfm.syntax--markup.syntax--code .syntax--support {
+  color: hsl(212, 22%, 44%);
+}
+.syntax--gfm.syntax--comment {
+  color: hsl(212, 22%, 44%);
+}
+.syntax--gfm.syntax--comment.syntax--quote {
+  color: hsl(212, 66%, 72%);
+}
+.syntax--gfm.syntax--table {
+  color: hsl(160, 99%, 60%);
+}
+.syntax--gfm.syntax--table .syntax--border,
+.syntax--gfm.syntax--table .syntax--pipe {
+  color: hsl(212, 11%, 30%);
+}
+.syntax--gfm.syntax--variable,
+.syntax--gfm.syntax--entity {
+  color: hsl(160, 99%, 60%);
+}
+.syntax--gfm.syntax--support {
+  color: hsl(160, 55%, 44%);
+}
+.syntax--gfm.syntax--heading-1,
+.syntax--gfm.syntax--heading-2,
+.syntax--gfm.syntax--heading-3 {
+  color: hsl(160, 99%, 60%);
+}
+.syntax--gfm.syntax--heading-4,
+.syntax--gfm.syntax--heading-5,
+.syntax--gfm.syntax--heading-6 {
+  color: hsl(160, 55%, 44%);
+}
+.syntax--haskell.syntax--source {
+  color: hsl(212, 66%, 72%);
+}
+.syntax--haskell.syntax--source .syntax--punctuation,
+.syntax--haskell.syntax--source .syntax--bracket,
+.syntax--haskell.syntax--source .syntax--brace {
+  color: hsl(212, 11%, 30%);
+}
+.syntax--haskell.syntax--source .syntax--string .syntax--punctuation {
+  color: hsl(160, 22%, 33%);
+}
+.syntax--html.syntax--meta {
+  color: hsl(212, 11%, 30%);
+}
+.syntax--html.syntax--embedded .syntax--meta,
+.syntax--html.syntax--doctype,
+.syntax--html.syntax--text {
+  color: hsl(212, 22%, 44%);
+}
+.syntax--html .syntax--string .syntax--id {
+  color: hsl(160, 99%, 60%);
+}
+.syntax--jade.syntax--text,
+.syntax--jade .syntax--constant.syntax--name.syntax--attribute.syntax--tag {
+  color: hsl(212, 22%, 44%);
+}
+.syntax--jade .syntax--meta.syntax--control.syntax--flow {
+  color: hsl(212, 66%, 72%);
+}
+.syntax--jade .syntax--attribute-name.syntax--id {
+  color: hsl(160, 99%, 60%);
+}
+.syntax--java .syntax--method {
+  color: hsl(212, 66%, 72%);
+}
+.syntax--java .syntax--method .syntax--punctuation,
+.syntax--java .syntax--method .syntax--bracket,
+.syntax--java .syntax--method .syntax--brace {
+  color: hsl(212, 11%, 30%);
+}
+.syntax--java .syntax--method .syntax--string .syntax--punctuation {
+  color: hsl(160, 22%, 33%);
+}
+.syntax--java .syntax--dereference {
+  color: hsl(212, 22%, 44%);
+}
+.syntax--js.syntax--delimiter {
+  color: hsl(212, 11%, 30%);
+}
+.syntax--js.syntax--source {
+  color: hsl(212, 66%, 72%);
+}
+.syntax--js.syntax--source .syntax--punctuation,
+.syntax--js.syntax--source .syntax--bracket,
+.syntax--js.syntax--source .syntax--brace {
+  color: hsl(212, 11%, 30%);
+}
+.syntax--js.syntax--source .syntax--string .syntax--punctuation {
+  color: hsl(160, 22%, 33%);
+}
+.syntax--json .syntax--string {
+  color: hsl(212, 66%, 72%);
+}
+.syntax--json .syntax--string .syntax--punctuation {
+  color: hsl(212, 11%, 30%);
+}
+.syntax--json .syntax--value > .syntax--string {
+  color: hsl(160, 99%, 60%);
+}
+.syntax--json .syntax--value > .syntax--string .syntax--punctuation {
+  color: hsl(212, 11%, 30%);
+}
+.syntax--json .syntax--value .syntax--constant {
+  color: hsl(160, 55%, 44%);
+}
+.syntax--less.syntax--variable:first-child {
+  color: hsl(212, 66%, 72%);
+}
+.syntax--less .syntax--mixin {
+  color: hsl(160, 55%, 44%);
+}
+.syntax--mediawiki {
+  color: hsl(212, 99%, 92%);
+}
+.syntax--mediawiki .syntax--punctuation,
+.syntax--mediawiki .syntax--bracket,
+.syntax--mediawiki .syntax--brace {
+  color: hsl(212, 11%, 30%);
+}
+.syntax--mediawiki .syntax--string .syntax--punctuation {
+  color: hsl(160, 22%, 33%);
+}
+.syntax--mediawiki .syntax--wiki-link {
+  color: hsl(212, 66%, 72%);
+}
+.syntax--mediawiki .syntax--heading {
+  color: hsl(160, 99%, 60%);
+}
+.syntax--mediawiki .syntax--function-call {
+  color: hsl(160, 55%, 44%);
+}
+.syntax--mediawiki .syntax--value {
+  color: hsl(160, 99%, 60%);
+}
+.syntax--mediawiki .syntax--fix_this_later {
+  color: hsl(212, 66%, 72%);
+}
+.syntax--mediawiki .syntax--pipe,
+.syntax--mediawiki .syntax--link,
+.syntax--mediawiki .syntax--tag {
+  color: hsl(212, 11%, 30%);
+}
+.syntax--php .syntax--string-contents {
+  color: hsl(160, 99%, 60%);
+}
+.syntax--sass .syntax--at-rule .syntax--at-rule,
+.syntax--sass .syntax--at-rule .syntax--at-rule > .syntax--punctuation {
+  color: hsl(212, 99%, 92%);
+}
+.syntax--sass .syntax--mixin + .syntax--function,
+.syntax--sass .syntax--include + .syntax--function {
+  color: hsl(160, 55%, 44%);
+}
+.syntax--sass.syntax--property-value {
+  color: hsl(160, 99%, 60%);
+}
+.syntax--sass.syntax--property-value .syntax--function {
+  color: hsl(212, 66%, 72%);
+}
+.syntax--sass.syntax--property-value .syntax--punctuation {
+  color: hsl(212, 11%, 30%);
+}
+.syntax--sass.syntax--variable.syntax--parameter.syntax--url {
+  color: hsl(160, 99%, 60%);
+}
+.syntax--sass.syntax--class,
+.syntax--sass.syntax--parent-selector-suffix {
+  color: hsl(212, 99%, 92%);
+}
+.syntax--scss .syntax--at-rule .syntax--at-rule,
+.syntax--scss .syntax--at-rule .syntax--at-rule > .syntax--punctuation {
+  color: hsl(212, 99%, 92%);
+}
+.syntax--scss .syntax--mixin + .syntax--function,
+.syntax--scss .syntax--include + .syntax--function {
+  color: hsl(160, 55%, 44%);
+}
+.syntax--scss.syntax--property-value {
+  color: hsl(160, 99%, 60%);
+}
+.syntax--scss.syntax--property-value .syntax--function {
+  color: hsl(212, 66%, 72%);
+}
+.syntax--scss.syntax--property-value .syntax--punctuation {
+  color: hsl(212, 11%, 30%);
+}
+.syntax--scss.syntax--variable.syntax--parameter.syntax--url {
+  color: hsl(160, 99%, 60%);
+}
+.syntax--scss.syntax--class,
+.syntax--scss.syntax--parent-selector-suffix {
+  color: hsl(212, 99%, 92%);
+}
+.syntax--slim.syntax--meta {
+  color: hsl(212, 11%, 30%);
+}
+.syntax--slim.syntax--text {
+  color: hsl(212, 22%, 44%);
+}
+.syntax--slim .syntax--string .syntax--id {
+  color: hsl(160, 99%, 60%);
+}
+.syntax--stylus .syntax--function .syntax--name {
+  color: hsl(160, 55%, 44%);
+}
+.syntax--tex .syntax--other {
+  color: hsl(160, 55%, 44%);
+}
+.syntax--tex .syntax--reference {
+  color: hsl(212, 66%, 72%);
+}
+.syntax--plain .syntax--text {
+  color: hsl(212, 99%, 92%);
+}
+.syntax--yaml .syntax--tag {
+  color: hsl(212, 66%, 72%);
+}
+.syntax--yaml .syntax--constant {
+  color: hsl(160, 55%, 44%);
+}
+.syntax--yaml .syntax--punctuation {
+  color: hsl(212, 11%, 30%);
+}
