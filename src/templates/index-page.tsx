@@ -3,7 +3,7 @@ import {Link, graphql} from 'gatsby'
 
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
-import { ImageInfo } from '../common/types';
+import {ImageInfo} from '../common/types'
 
 interface IndexPageTemplateProps {
   image: string | ImageInfo
@@ -33,7 +33,9 @@ export const IndexPageTemplate = ({
       className="full-width-image margin-top-0"
       style={{
         backgroundImage: `url(${
-          typeof image !== 'string' && !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          typeof image !== 'string' && !!image.childImageSharp
+            ? image.childImageSharp.fluid.src
+            : image
         })`,
         backgroundPosition: `top left`,
         backgroundAttachment: `fixed`,

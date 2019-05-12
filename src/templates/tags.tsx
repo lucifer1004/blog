@@ -14,7 +14,7 @@ class TagRoute extends React.Component {
       </li>
     ))
     const tag = (this.props as any).pageContext.tag
-    const title =(this.props as any).data.site.siteMetadata.title
+    const title = (this.props as any).data.site.siteMetadata.title
     const totalCount = (this.props as any).data.allMarkdownRemark.totalCount
     const tagHeader = `${totalCount} post${
       totalCount === 1 ? '' : 's'

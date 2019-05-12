@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react'
+import React, {ChangeEvent} from 'react'
 import {navigate} from 'gatsby-link'
 import Layout from '../../components/Layout'
 
