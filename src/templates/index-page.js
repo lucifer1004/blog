@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import {Link, graphql} from 'gatsby'
 
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
@@ -36,8 +36,7 @@ export const IndexPageTemplate = ({
         <h1
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
-            boxShadow:
-              '#00D5ED 0.5rem 0px 0px, #00D5ED -0.5rem 0px 0px',
+            boxShadow: '#00D5ED 0.5rem 0px 0px, #00D5ED -0.5rem 0px 0px',
             backgroundColor: '#00D5ED',
             color: 'white',
             lineHeight: '1',
@@ -49,8 +48,7 @@ export const IndexPageTemplate = ({
         <h3
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
-            boxShadow:
-              '#00D5ED 0.5rem 0px 0px, #00D5ED -0.5rem 0px 0px',
+            boxShadow: '#00D5ED 0.5rem 0px 0px, #00D5ED -0.5rem 0px 0px',
             backgroundColor: '#00D5ED',
             color: 'white',
             lineHeight: '1',
@@ -103,8 +101,8 @@ IndexPageTemplate.propTypes = {
   description: PropTypes.string,
 }
 
-const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+const IndexPage = ({data}) => {
+  const {frontmatter} = data.markdownRemark
 
   return (
     <Layout>
@@ -131,7 +129,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
       frontmatter {
         title
         image {

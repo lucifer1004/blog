@@ -3,8 +3,7 @@ var proxy = require('http-proxy-middleware')
 module.exports = {
   siteMetadata: {
     title: `Gabriel Wu's Blog`,
-    description:
-      'Powered by Gatsby, Netlify and Netlify CMS.',
+    description: 'Powered by Gatsby, Netlify and Netlify CMS.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -86,7 +85,7 @@ module.exports = {
         pathRewrite: {
           '/.netlify/functions/': '',
         },
-      })
+      }),
     )
   },
 }

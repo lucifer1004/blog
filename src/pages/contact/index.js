@@ -1,5 +1,5 @@
 import React from 'react'
-import { navigate } from 'gatsby-link'
+import {navigate} from 'gatsby-link'
 import Layout from '../../components/Layout'
 
 function encode(data) {
@@ -11,11 +11,11 @@ function encode(data) {
 export default class Index extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { isValidated: false }
+    this.state = {isValidated: false}
   }
 
   handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value })
+    this.setState({[e.target.name]: e.target.value})
   }
 
   handleSubmit = e => {
@@ -23,7 +23,7 @@ export default class Index extends React.Component {
     const form = e.target
     fetch('/', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
       body: encode({
         'form-name': form.getAttribute('name'),
         ...this.state,

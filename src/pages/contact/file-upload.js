@@ -1,5 +1,5 @@
 import React from 'react'
-import { navigate } from 'gatsby-link'
+import {navigate} from 'gatsby-link'
 import Layout from '../../components/Layout'
 
 function encode(data) {
@@ -19,11 +19,11 @@ export default class Contact extends React.Component {
   }
 
   handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value })
+    this.setState({[e.target.name]: e.target.value})
   }
 
   handleAttachment = e => {
-    this.setState({ [e.target.name]: e.target.files[0] })
+    this.setState({[e.target.name]: e.target.files[0]})
   }
 
   handleSubmit = e => {
